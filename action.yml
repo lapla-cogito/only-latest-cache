@@ -1,0 +1,16 @@
+name: 'Leave only the latest cache'
+description: 'Leave only the latest cache of the corresponding key in GitHub Actions'
+author: 'lapla'
+branding:
+  icon: 'crosshair'
+  color: 'green'
+inputs:
+  key_prefix:
+    description: 'Target cache key'
+    required: true
+  personal_token:
+    description: 'personal access token which has write permission to the repository actions'
+    required: false
+runs:
+  using: 'node20'
+  main: 'lib/index.js'
