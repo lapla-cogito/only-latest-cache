@@ -32,8 +32,8 @@ export async function run(): Promise<void> {
             core.debug(`[DEBUG] actionsCache: ${JSON.stringify(actionsCache)}`);
         }
 
-        if (actionsCache.length === 0) {
-            core.info(`[INFO] no cache found for key: ${key_prefix}`);
+        if (actionsCache.length <= 1) {
+            core.info(`[INFO] skip for key: ${key_prefix}`);
             return;
         }
 
